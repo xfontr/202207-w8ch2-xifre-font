@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useStarWars from "./hooks/useStarWars";
+import useStarWars from "../../hooks/useStarWars";
 
 const App = (): JSX.Element => {
   const { getStarshipCount } = useStarWars();
@@ -14,7 +14,7 @@ const App = (): JSX.Element => {
         setShipData({ ...shipData, count: ships });
       }
     })();
-  });
+  }, [getStarshipCount, shipData]);
 
   return (
     <div className="app">
