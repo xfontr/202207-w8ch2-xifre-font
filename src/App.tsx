@@ -16,7 +16,12 @@ const App = (): JSX.Element => {
     })();
   });
 
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <h2 className="header-title">Starhips</h2>
+      <span>Total ships: {shipData.count}</span>
+    </div>
+  );
 };
 
 export default App;

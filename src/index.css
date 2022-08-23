@@ -12,12 +12,14 @@ body {
   margin: 0px;
   padding: 0px;
 }
-#header-title {
+
+.header-title {
   color: yellow;
   font-size: 3rem;
   margin: 3rem;
 }
-#main-container {
+
+.app {
   width: 50vw;
   min-height: 50vh;
   padding: 1rem;
