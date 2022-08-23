@@ -4,6 +4,7 @@ import App from "./App";
 const mockGetStarshipCount = jest.fn().mockResolvedValue("34");
 
 jest.mock("../../hooks/useStarWars", () => () => ({
+  ...jest.requireActual("../../hooks/useStarWars"),
   getStarshipCount: mockGetStarshipCount,
 }));
 

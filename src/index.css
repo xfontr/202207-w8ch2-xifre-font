@@ -1,4 +1,5 @@
 body {
+  padding: 3rem 0;
   margin: 0;
   background-image: url("../public/img/background.jpg");
   width: 100vw;
@@ -27,4 +28,76 @@ body {
   background-color: black;
   border-radius: 10px;
   color: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  transition: 1s;
+  animation-duration: 10s;
+  padding: 1rem;
+  animation-name: natural-move;
+  animation-iteration-count: infinite;
+}
+
+*:hover {
+  animation-name: super-X-move, super-move;
+}
+
+@keyframes super-move {
+  from {
+    transform: scale(1) rotateX(30deg) rotateY(200deg);
+  }
+
+  25% {
+    transform: scale(3) rotateX(70deg) rotateY(-70deg);
+  }
+
+  50% {
+    transform: scale(4) rotateX(-180deg) rotateY(130deg);
+  }
+
+  75% {
+    transform: scale(6) rotateX(-100deg) rotateY(100deg);
+  }
+
+  to {
+    transform: scale(12) rotateX(200deg) rotateY(30deg);
+  }
+}
+
+@keyframes super-X-move {
+  from {
+    transform: scale(1) rotateY(30deg);
+    background-color: rgba(255, 3, 3, 0.21);
+  }
+
+  50% {
+    transform: scale(6) rotateY(100deg);
+    background-color: rgba(179, 179, 87, 0.535);
+  }
+
+  to {
+    transform: scale(12) rotateY(200deg);
+    background-color: rgb(3, 255, 37);
+  }
+}
+
+@keyframes natural-move {
+  from {
+    transform: translate(50, 50, 50);
+  }
+
+  50% {
+    transform: translate(70, 70, 70);
+  }
+
+  to {
+    transform: translate(100, 100, 100);
+  }
 }
