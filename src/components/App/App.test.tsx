@@ -1,10 +1,12 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import App from "./App";
 
 const mockGetStarshipCount = jest.fn().mockResolvedValue("34");
 
 jest.mock("../../hooks/useStarWars", () => () => ({
+  ...jest.requireActual("../../hooks/useStarWars"),
   getStarshipCount: mockGetStarshipCount,
+  getStarships: () => [{ name: "a", class: "b" }],
 }));
 
 describe("Given a App component", () => {

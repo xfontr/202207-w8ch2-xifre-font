@@ -11,6 +11,62 @@ const handlers = [
       })
     )
   ),
+
+  rest.get(`${apiUrl}/?page=1`, (req, res, ctx) =>
+    res(
+      ctx.status(403),
+      ctx.json({
+        results: [
+          {
+            name: "a",
+            starship_class: "a",
+          },
+        ],
+      })
+    )
+  ),
+
+  rest.get(`${apiUrl}/?page=2`, (req, res, ctx) =>
+    res(
+      ctx.status(403),
+      ctx.json({
+        results: [
+          {
+            name: "a",
+            starship_class: "a",
+          },
+        ],
+      })
+    )
+  ),
+
+  rest.get(`${apiUrl}/?page=3`, (req, res, ctx) =>
+    res(
+      ctx.status(403),
+      ctx.json({
+        results: [
+          {
+            name: "a",
+            starship_class: "a",
+          },
+        ],
+      })
+    )
+  ),
+
+  rest.get(`${apiUrl}/?page=4`, (req, res, ctx) =>
+    res(
+      ctx.status(403),
+      ctx.json({
+        results: [
+          {
+            name: "a",
+            starship_class: "a",
+          },
+        ],
+      })
+    )
+  ),
 ];
 
 export default handlers;
